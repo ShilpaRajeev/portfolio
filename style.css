@@ -1,0 +1,408 @@
+:root {
+    --antiflash-white: #e9ecefff;
+    --platinum: #dee2e6ff;
+    --french-gray-2: #adb5bdff;   
+    --eerie-black: #252422ff;
+    --salmon-pink: #e5989bff;
+    --blush: #da627dff;
+    --raspberry-rose: #a53860ff;
+    --chocolate-cosmos: #450920ff;
+
+}
+
+
+body {
+  margin: 20px;
+  font-family: monospace, sans-serif;
+  line-height: 1.6;
+  background-color: var(--antiflash-white);
+}
+
+/* Header */
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 40px;
+  background-color: var(--antiflash-white);
+  
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  font-weight: bold;
+  font-size: 1.2rem;
+}
+
+.logo img {
+  width: 28px;
+  height: 28px;
+  margin-right: 10px;
+}
+
+header a {
+    text-decoration: none;
+    color: #333;
+}
+
+nav a {
+  text-decoration: none;
+  color: #333;
+  margin: 0 8px;
+}
+
+nav span {
+  color: #aaa;
+}
+
+nav a:hover {
+  color: var(--blush);
+}
+
+/* Intro Section */
+.intro-section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 60px 20px;
+  max-width: 900px;
+  margin: 10px auto;
+}
+
+.profile-photo img {
+  width: 420px;
+  height: 420px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-right: 40px;
+  border: 3px solid #ddd;
+}
+
+.intro-text h1 {
+  margin: 0;
+  font-size: 5rem;
+  color: #333;
+}
+
+.intro-text h2 {
+  margin: 5px 0 15px;
+  font-size: 1.3rem;
+  color: var(--eerie-black);
+}
+
+.intro-text p {
+  max-width: 500px;
+  color: #555;
+}
+
+/* Circle Links */
+.circle-links {
+  margin-top: 25px;
+  display: flex;
+  gap: 25px;
+}
+
+.circle-resume, .circle-blog, .circle-contact {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 140px;
+  height: 140px;
+  border-radius: 50%;
+  text-decoration: none;
+  color: #333;
+  font-weight: bold;
+  transition: all 0.3s ease;
+  box-shadow: 0 3px 6px rgba(0,0,0,0.1);
+}
+
+.circle-resume {
+    background-color: var(--salmon-pink);
+}
+
+.circle-blog {
+    background-color: var(--blush);
+}
+
+.circle-contact {
+    background-color: var(--raspberry-rose);
+}
+
+.circle-resume:hover, .circle-blog:hover , .circle-contact:hover {
+  background-color: var(--french-gray-2);
+  color: #000;
+  transform: scale(1.1);
+}
+
+/* Footer */
+footer {
+  display: flex;
+  justify-content: space-between; /* evenly spaced */
+  align-items: center;
+  background-color: var(--antiflash-white);
+  padding-top: 35px;
+  border-top: 1px solid var(--french-gray-2);
+  flex-wrap: nowrap;
+  text-align: center;
+}
+
+.footer-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  flex: 1;             /* equal width for all items */
+  max-width: 180px;    /* optional: prevent items from stretching too much */
+}
+
+.footer-item h4 {
+  margin: 0 0 6px;
+  font-size: 0.95rem;
+  color: #333;
+  line-height: 0.8;
+}
+
+.footer-item p {
+  margin: 0;
+  color: #555;
+  font-size: 0.85rem;
+  line-height: 1.2;
+}
+
+.social-icons {
+  display: flex;
+  gap: 10px;         
+  justify-content: center;
+}
+
+.social-icons a {
+  color: #333;
+  font-size: 0.95rem;    /* slightly smaller than before */
+  transition: color 0.3s ease;
+}
+
+.social-icons a:hover {
+  color: #0073e6;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  font-weight: bold;
+  font-size: 1.2rem;
+}
+
+/* Small dark grey circle as logo */
+.logo-circle {
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  background-color: var(--salmon-pink); /* dark grey */
+  margin-right: 10px;
+}
+
+/* For tablets */
+@media (max-width: 1024px) {
+  .intro-section {
+    flex-direction: column;
+    text-align: center;
+    margin: 60px auto;
+  }
+
+  .profile-photo img {
+    margin: 0 auto 20px auto;
+    width: 300px;
+    height: 300px;
+  }
+
+  .intro-text p {
+    max-width: 100%;
+  }
+
+  .circle-links {
+    justify-content: center;
+  }
+}
+
+/* For mobile screens */
+@media (max-width: 768px) {
+  header {
+    flex-direction: column;
+    gap: 15px;
+    text-align: center;
+  }
+
+  nav {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+  }
+
+  .circle-links {
+    flex-direction: column;
+    gap: 20px;
+    align-items: center;
+  }
+
+  footer {
+    flex-direction: column;
+    gap: 20px;
+  }
+}
+
+/* For very small phones */
+@media (max-width: 480px) {
+  .intro-text h1 {
+    font-size: 3rem;
+  }
+
+  .profile-photo img {
+    width: 220px;
+    height: 220px;
+  }
+
+  .circle-resume, .circle-blog, .circle-contact {
+    width: 100px;
+    height: 100px;
+    font-size: 0.8rem;
+  }
+
+  .footer-item h4 {
+    font-size: 0.9rem;
+  }
+
+  .footer-item p {
+    font-size: 0.8rem;
+  }
+}
+
+/* Resume Container */
+.resume-container {
+  max-width: 800px;
+  margin: 80px auto;
+  padding: 0 20px;
+}
+
+.resume-heading {
+  font-size: 2rem;
+  margin-bottom: 40px;
+  color: var(--eerie-black);
+}
+
+/* Timeline Section */
+.timeline {
+  margin-bottom: 50px;
+  position: relative;
+  padding-left: 40px;
+}
+
+.timeline h2 {
+  font-size: 1.5rem;
+  color: var(--raspberry-rose);
+  margin-bottom: 20px;
+}
+
+/* Vertical line */
+.timeline::before {
+  content: "";
+  position: absolute;
+  left: 20px;
+  top: 0;
+  bottom: 0;
+  width: 2px;
+  background: var(--french-gray-2);
+}
+
+/* Timeline items */
+.timeline-item {
+  display: flex;
+  margin-bottom: 25px;
+  position: relative;
+}
+
+.timeline-date {
+  flex: 0 0 150px;
+  font-weight: bold;
+  color: var(--french-gray-2);
+}
+
+.timeline-content {
+  flex: 1;
+}
+
+.timeline-content h3 {
+  margin: 0 0 5px;
+  font-size: 1.1rem;
+  color: var(--eerie-black);
+}
+
+.timeline-content p {
+  margin: 0;
+  color: #333;
+  font-size: 0.95rem;
+}
+
+/* Contact Page */
+.contact-container {
+  max-width: 500px;
+  margin: 200px auto;
+  padding: 0 20px;
+  text-align: center;
+}
+
+.contact-container h1 {
+  font-size: 2rem;
+  color: var(--raspberry-rose);
+  margin-bottom: 20px;
+}
+
+.contact-message {
+  font-size: 1.1rem;
+  margin-bottom: 20px;
+  color: #333;
+}
+
+.contact-email {
+  font-size: 1.2rem;
+  font-weight: bold;
+}
+
+.contact-email a {
+  color: var(--eerie-black);
+  text-decoration: none;
+}
+
+.contact-email a:hover {
+  color: var(--raspberry-rose);
+}
+
+/* Hidden by default */
+.hidden {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 0.8s ease, transform 0.6s ease;
+}
+
+/* Visible (active) */
+.show {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Swipe-up animation */
+@keyframes swipeUp {
+  from {
+    opacity: 0;
+    transform: translateY(80px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Apply animation to intro section */
+.intro-section {
+  animation: swipeUp 1s ease-out forwards;
+}
